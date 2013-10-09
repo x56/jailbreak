@@ -79,13 +79,13 @@ EnterARM(Leet_hax)
     orr     r6, r7, #(BIT_IRQ | BIT_FIQ)
     msr     cpsr_cf, r6
 
-    /* Exit the kernel shellcode. Return to the previous processor state. */
-    msr     cpsr_cf, r7
-
     /* xxx write your kernel shellcode routines here */
     /* xxx right now, I'll leave an Undefined instruction here so you can see a cool panic! */
 
     .long   0xfefefefe
+    
+    /* Exit the kernel shellcode. Return to the previous processor state. */
+    msr     cpsr_cf, r7
 
     /* Bye. */
     ldmfd   sp!, {r4-r7, pc}
