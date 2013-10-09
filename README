@@ -1,0 +1,15 @@
+for iOS 4.2? untested!
+
+this is just a quick sloppy implementation of the kernel part of
+feedface (by @pod2g), used in iOS 4.2.1 for untethering...
+
+to bootstrap this as an untether, the evasi0n amfi.dylib should
+probably work.
+
+-- with love from winocm
+
+$(SRCROOT)/hfs/exploit.hfs -> /private/var/jailbreak/exploit.hfs
+$(OBJROOT)/kexploit        -> /private/var/jailbreak/hfs_untether
+.. and so on
+
+
